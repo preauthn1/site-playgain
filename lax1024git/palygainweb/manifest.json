@@ -1,0 +1,233 @@
+{
+    "name" : "玩赚全球",
+    "appid" : "__UNI__7AD9CE9",
+    "description" : "玩赚全球App是一款以提供旅游套餐为主，集特色旅游服务为一体的旅游应用，满足用户旅游出行需要，致力于打造中国头部互联网文旅平台",
+    "versionName" : "1.0.2",
+    "versionCode" : 102,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : false,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "OAuth" : {},
+            "VideoPlayer" : {},
+            "Maps" : {},
+            "Geolocation" : {},
+            "Share" : {},
+            "Barcode" : {},
+            "Camera" : {},
+            "Push" : {},
+            "Payment" : {}
+        },
+        "optimization" : {
+            "subPackages" : true
+        },
+        "runmode" : "liberate", // 开启分包优化后，必须配置资源释放模式
+
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ],
+                "minSdkVersion" : 21
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "idfa" : false,
+                "dSYMs" : false,
+                "capabilities" : {
+                    "entitlements" : {
+                        "com.apple.developer.associated-domains" : [ "applinks:uniweb.wzqqly.com" ]
+                    }
+                }
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "geolocation" : {
+                    "system" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "amap" : {
+                        "name" : "amapBPLwC2Q3M",
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "24dd86079cf6101cd5867c28c3fffd2c",
+                        "appkey_android" : "6386a41a58bcb47b0b777f3fd58ba7bd"
+                    }
+                },
+                "payment" : {
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "wxcf499ad6bb3ddfc4",
+                        "UniversalLinks" : "https://uniweb.wzqqly.com/uni-universallinks/__UNI__AE2EC20/"
+                    },
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxcf499ad6bb3ddfc4",
+                        "UniversalLinks" : "https://uniweb.wzqqly.com/uni-universallinks/__UNI__AE2EC20/"
+                    },
+                    "qq" : {
+                        "appid" : "102309876",
+                        "UniversalLinks" : "https://uniweb.wzqqly.com/qq_conn/102309876/"
+                    }
+                },
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wxcf499ad6bb3ddfc4",
+                        "UniversalLinks" : "https://uniweb.wzqqly.com/uni-universallinks/__UNI__AE2EC20/"
+                    },
+                    "qq" : {
+                        "appid" : "102309876",
+                        "UniversalLinks" : "https://uniweb.wzqqly.com/qq_conn/102309876/"
+                    },
+                    "univerify" : {}
+                },
+                "maps" : {
+                    "amap" : {
+                        "name" : "amapBPLwC2Q3M",
+                        "appkey_ios" : "24dd86079cf6101cd5867c28c3fffd2c",
+                        "appkey_android" : "6386a41a58bcb47b0b777f3fd58ba7bd"
+                    }
+                },
+                "ad" : {},
+                "push" : {
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : false
+                    }
+                }
+            },
+            "splashscreen" : {
+                "androidStyle" : "default",
+                "iosStyle" : "storyboard",
+                "android" : {
+                    "hdpi" : "unpackage/res/splash/android-x.9.png",
+                    "xhdpi" : "unpackage/res/splash/android-2x.9.png",
+                    "xxhdpi" : "unpackage/res/splash/android-3x.9.png"
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            }
+        },
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wx4a653571efb7024d",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : true,
+            "postcss" : true,
+            "minified" : true
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false,
+        "version" : "2"
+    },
+    "vueVersion" : "3",
+    "h5" : {
+        "router" : {
+            "mode" : "hash",
+            "base" : "/h5/"
+        },
+        "devServer" : {
+            "https" : false
+        },
+        "template" : "index.html",
+        "sdkConfigs" : {
+            "maps" : {
+                "amap" : {
+                    "key" : "2b700e578a3112c07ede7e83cbeed66d",
+                    "securityJsCode" : "57e4fb217b6ff190c8a78a434d252e3d",
+                    "serviceHost" : ""
+                }
+            }
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "title" : "玩赚全球"
+    },
+    "_spaceID" : "mp-45e6b30e-d7a5-4b5e-bf76-a17b0c73e755",
+    "_qq_spaceID" : "mp-45e6b30e-d7a5-4b5e-bf76-a17b0c73e755",
+    "fallbackLocale" : "zh-Hans"
+}
+/* 应用发布信息 *//* android打包配置 *//* ios打包配置 */
+

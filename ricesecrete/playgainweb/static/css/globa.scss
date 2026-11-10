@@ -1,0 +1,42 @@
+:root{
+	--active-bg:#F3C720;
+	--primary-bg:#F8FDFE
+}
+
+.fiexd-bottom-btn{
+	background: #FFFFFF;
+	box-shadow: 0rpx 0rpx 9rpx 0rpx rgba(15,9,13,0.09);
+	border-radius: 30rpx 30rpx 0rpx 0rpx;
+	position: fixed;width: 100%;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+	padding: 14rpx 24rpx;
+}
+.pb200{
+	padding-bottom: 200rpx;
+}
+
+.box-shadow-1{
+	box-shadow: 0rpx 0rpx 26rpx 1rpx rgba(15,9,13,0.06);
+}
+
+.tab_active {
+	color: #0B0B0B;
+}
+.tab_active::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 15rpx;
+	background: linear-gradient(180deg, #FBE44D, #6BDBFB);
+	border-radius: 8rpx;
+	left: 0;
+	bottom: 0;
+}
+.mt-300{
+	margin-top: 300rpx;
+}
+.width-80{
+	width: 80rpx;
+}

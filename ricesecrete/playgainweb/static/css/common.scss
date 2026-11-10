@@ -1,0 +1,369 @@
+// 颜色======================================
+$colors: (
+  red: #ff0000,
+  darkRed: #d90209,
+  green: #00ff00,
+  blue: #0000ff,
+  black: #000000,
+  white:#fff,
+  '0790FD':#0790FD,
+  '3162FF':#3162FF,
+  'F4C020':#F4C020,
+  '949494':#949494,
+  'B47812':#B47812,
+  'A26AFF':#A26AFF,
+  'F66A01':#F66A01,
+  '767676':#767676,
+  '0B0B0B':#0B0B0B,
+  'D8D6D6':#D8D6D6,
+  'D4D5D7':#D4D5D7,
+  'FFE401':#FFE401,
+  'F3C720':#F3C720,
+  'C4C4C4':#C4C4C4,
+  '3D91F5':#3D91F5,
+  'F7D94C':#F7D94C,
+  'AEAEAE':#AEAEAE,
+  'E6722D':#E6722D,
+  '898989':#898989,
+  'A4A4A4':#A4A4A4,
+  '0892FD':#0892FD,
+  'f6fdfeFF':#f6fdfeFF,
+  '666666' :#666666,
+  'EDC74B':#EDC74B,
+  'A593F7':#A593F7,
+  'E6E6E6FF':#E6E6E6FF,
+  '51A838':#51A838,
+  'C1423C':#C1423C,
+  'FB0606':#FB0606,
+  'F0F0F0FF':#F0F0F0FF,
+  '6E7171':#6E7171,
+  '02FE2B': #02FE2B,
+  
+  
+  
+);
+// 背景颜色
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+// 文字颜色
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}
+// 文字粗细
+$font-weights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900
+);
+
+@each  $name, $weight in $font-weights {
+  .font-#{$name} {
+    font-weight: $weight;
+  }
+}
+
+$aligns: (
+  left,
+  center,
+  right,
+  justify
+);
+
+/* 文字位置 */
+@each $align in $aligns {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+// 文字大小
+@for $i from 1 through 12 {
+  .font-#{$i * 2 + 8} {
+    font-size: #{$i * 2 + 8}rpx;
+  }
+}
+// padding
+@for $i from 1 through 11 {
+  .p-#{$i * 2 + 8} {
+    padding: #{$i * 2 + 8}rpx;
+  }
+  .pl-#{$i * 2 + 8} {
+    padding-left: #{$i * 2 + 8}rpx;
+  }
+  .pr-#{$i * 2 + 8} {
+    padding-right: #{$i * 2 + 8}rpx;
+  }
+  .pt-#{$i * 2 + 8} {
+    padding-top: #{$i * 2 + 8}rpx;
+  }
+  .pb-#{$i * 2 + 8} {
+    padding-bottom: #{$i * 2 + 8}rpx;
+  }
+  .plr-#{$i * 2 + 8} {
+    padding-left: #{$i * 2 + 8}rpx;
+    padding-right: #{$i * 2 + 8}rpx;
+  }
+  .ptb-#{$i * 2 + 8} {
+    padding-top: #{$i * 2 + 8}rpx;
+    padding-bottom: #{$i * 2 + 8}rpx;
+  }
+}
+@for $i from 4 through 6 {
+	.line-height-#{$i * 10} {
+	  line-height: #{$i * 10}rpx;
+	}
+  .p-#{$i * 10} {
+    padding: #{$i * 10}rpx;
+  }
+  .pl-#{$i * 10} {
+    padding-left: #{$i * 10}rpx;
+  }
+  .pr-#{$i * 10} {
+    padding-right: #{$i * 10}rpx;
+  }
+  .pt-#{$i * 10} {
+    padding-top: #{$i * 10}rpx;
+  }
+  .pb-#{$i * 10} {
+    padding-bottom: #{$i * 10}rpx;
+  }
+  .plr-#{$i * 10} {
+    padding-left: #{$i * 10}rpx;
+    padding-right: #{$i * 10}rpx;
+  }
+  .ptb-#{$i * 10} {
+    padding-top: #{$i * 10}rpx;
+    padding-bottom: #{$i * 10}rpx;
+  }
+}
+// margin
+@for $i from 1 through 11 {
+  .m-#{$i * 2 + 8} {
+    margin: #{$i * 2 + 8}rpx;
+  }
+  .ml-#{$i * 2 + 8} {
+    margin-left: #{$i * 2 + 8}rpx;
+  }
+  .mr-#{$i * 2 + 8} {
+    margin-right: #{$i * 2 + 8}rpx;
+  }
+  .mt-#{$i * 2 + 8} {
+    margin-top: #{$i * 2 + 8}rpx;
+  }
+  .mb-#{$i * 2 + 8} {
+    margin-bottom: #{$i * 2 + 8}rpx;
+  }
+  .mlr-#{$i * 2 + 8} {
+    margin-left: #{$i * 2 + 8}rpx;
+    margin-right: #{$i * 2 + 8}rpx;
+  }
+  .mtb-#{$i * 2 + 8} {
+    margin-top: #{$i * 2 + 8}rpx;
+    margin-bottom: #{$i * 2 + 8}rpx;
+  }
+  .width-#{$i * 2 + 8} {
+    width: #{$i * 2 + 8}rpx;
+  }
+  .height-#{$i * 2 + 8} {
+    height: #{$i * 2 + 8}rpx;
+  }
+}
+@for $i from 4 through 8 {
+  .m-#{$i * 10} {
+    margin: #{$i * 10}rpx;
+  }
+  .ml-#{$i * 10} {
+    margin-left: #{$i * 10}rpx;
+  }
+  .mr-#{$i * 10} {
+    margin-right: #{$i * 10}rpx;
+  }
+  .mt-#{$i * 10} {
+    margin-top: #{$i * 10}rpx;
+  }
+  .mb-#{$i * 10} {
+    margin-bottom: #{$i * 10}rpx;
+  }
+  .mlr-#{$i * 10} {
+    margin-left: #{$i * 10}rpx;
+    margin-right: #{$i * 10}rpx;
+  }
+  .mtb-#{$i * 10} {
+    margin-top: #{$i * 10}rpx;
+    margin-bottom: #{$i * 10}rpx;
+  }
+}
+// 圆角
+@for $i from 1 through 11 {
+  .border-radius-#{$i * 2 + 8} {
+    border-radius: #{$i * 2 + 8}rpx;
+  }
+}
+.border-radius-50{
+	border-radius: 50%;
+}
+// 布局
+// Flex容器样式
+.flex {
+  display: flex;
+}
+.flex-1{
+	flex: 1;
+}
+// 设置主轴方向
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap{
+	flex-wrap: wrap;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+// 垂直居中
+.vertical-center {
+  display: flex;
+  align-items: center; // 垂直居中
+}
+
+// 水平居中
+.horizontal-center {
+  display: flex;
+  justify-content: center; // 水平居中
+}
+
+
+// 设置主轴对齐方式
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+// 设置交叉轴对齐方式
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.items-spaceAround {
+  align-items: space-around;
+}
+
+.items-spaceBetween {
+  align-items: space-between;
+}
+
+
+// 定位
+.absolute{
+	position: absolute;
+}
+.relative{
+	position: relative;
+}
+.fixed{
+	position: fixed;
+}
+
+.text-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-2line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;//需要自己设置
+}
+
+.overflow-hidden{
+	overflow: hidden;
+}
+
+.w100{
+	width: 100%;
+}
+.h100{
+	height: 100%;
+}
+.top-0{
+	top: 0;
+}
+.left-0{
+	left: 0;
+}
+.zIndex1{
+	z-index: 1;
+}
+.line-h66{
+	line-height: 66rpx;
+}
+$line-height: (
+	top:1,
+	center:2,
+	bottom:3,
+  );
+@each  $name, $line in $line-height {
+    .line-#{$name} {
+      line-height: $line;
+    }
+  }
